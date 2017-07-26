@@ -5,6 +5,6 @@ from ckeditor.fields import RichTextField
 class Article(TimeStampedModel):
     author = models.CharField(max_length=100)
     article_content = RichTextField(null=True)
-    card = models.ForeignKey('cards_api.Card', null=True, blank=True)
+
 
 
