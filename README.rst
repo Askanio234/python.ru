@@ -22,3 +22,11 @@ Contributing
     $ python manage.py createsuperuser --username admin --email=team@python.ru
 
 
+How to run from Docker:
+
+::
+
+    $ docker-compose build --no-cache
+    $ docker-compose run web python3 /src/manage.py migrate
+    $ docker-compose run web python3 /src/manage.py make_fish_data
+    $ docker-compose up
