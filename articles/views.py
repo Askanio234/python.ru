@@ -1,3 +1,10 @@
-from django.shortcuts import render
+from django.views.generic import DetailView
+from articles.models import Article
 
-# Create your views here.
+class ArticleView(DetailView):
+    model = Article
+    template = 'article_detail.html'
+
+
+
+

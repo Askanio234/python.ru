@@ -1,15 +1,10 @@
-from django import forms
 from django.db import models
 from model_utils.models import TimeStampedModel
-from django.contrib.flatpages.models import FlatPage
-from tinymce.widgets import TinyMCE
-from cards_api.models import Card
+from ckeditor.fields import RichTextField
 
-
-class Article(TimeStampedModel, forms.ModelForm):
+class Article(TimeStampedModel):
     author = models.CharField(max_length=100)
-    content = forms.TextField(widget=TinyMCE(attrs={'cols': 80, 'rows': 30})) #TODO Fix content field
+    article_content = RichTextField(null=True)
     card = models.ForeignKey('cards_api.Card', null=True, blank=True)
 
-    class Meta:
-        model = FlatPage
+
