@@ -10,4 +10,4 @@ class Banner(models.Model):
     )
 
     slug = StatusField(choices_name='BANNER_CHOICES')
-    image = models.ImageField(null=True, blank=False, upload_to='banner_images')
+    image = models.ImageField(blank=False, upload_to='banner_images')
