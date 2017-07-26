@@ -17,6 +17,7 @@ INSTALLED_APPS = [
     'django_extensions',
     'ckeditor',
     'articles',
+    'banners',
     'cards_api',
 ]
 
