@@ -27,7 +27,7 @@ class Card(TimeStampedModel, StatusModel):
     category = models.ForeignKey('CardCategory', null=True, blank=True)
     title = models.CharField(max_length=512)
     preview = models.CharField(max_length=1024)
-
+    article = models.ForeignKey('articles.Article', null=True, blank=True)
     has_button = models.BooleanField(default=False)
     button_text = models.CharField(max_length=20, null=True, blank=True)
     button_url = models.URLField(null=True, blank=True)
@@ -41,6 +41,7 @@ class Card(TimeStampedModel, StatusModel):
             'image': self.image.url if self.image else None,
             'type': self.type,
             'preview': self.preview,
+            'article_id': self.article_id,
             'category_id': self.category_id,
             'category_name': self.category.title if self.category else None,
             'title': self.title,
