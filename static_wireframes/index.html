@@ -17,14 +17,14 @@
   </head>
   <body>
     <div class="head-banner">
-      <img src="images/lg-banner.png" class="hidden-xs hidden-sm">
-      <img src="images/sm-banner.png" class="hidden-xs hidden-lg">
-      <img src="images/xs-banner.png" class="hidden-lg hidden-sm">
+      <a href="#" target="_blank"><img src="images/lg-banner.png" class="hidden-xs hidden-sm hidden-md"></a>
+      <a href="#" target="_blank"><img src="images/lg-banner.png" class="hidden-xs hidden-sm hidden-lg"></a>
+      <a href="#" target="_blank"><img src="images/sm-banner.png" class="hidden-xs hidden-lg hidden-md"></a>
+      <a href="#" target="_blank"><img src="images/xs-banner.png" class="hidden-lg hidden-sm hidden-md"></a>
     </div>
     <!-- navbar start -->
     <div class="container">
-      <div class="row">
-        <nav class="navbar">
+      <div class="row navbar">
           <div class="container-fluid">
             <div class="navbar-header">
               <a href="#" class="navbar-brand">
@@ -46,24 +46,23 @@
               </ul>
             </div>
           </div>
-          <hr class="hr-divider">
-        </nav>
+          <!-- <hr class="hr-divider"> -->
       </div>
-      <div class="header-news">
-        <div class="row">
-          <div class="col-md-8">  
-            <p><img src="images/mars.png" class="img-responsive"></p>
-          </div>
-          <div class="col-md-4 header-text">
-            <p class="tag visible-xs">Руководство</p>
-            <h1 class="hidden-xs"><a href="#">Выгружаем фото Марса с сайта NASA с помощью aiohttp</a></h1>
-            <h4 class="visible-xs">Выгружаем фото Марса с сайта NASA с помощью aiohttp</h4>
-            <p>I am a huge fan of the book The Martian by Andy Weir. Reading it I wondered how did Mark Watney feel when he walked around the Red Planet.</p>
-            <button class="btn btn-primary btn-square hidden-xs">Читать полностью</button>
-            <p class="date visible-xs">3 дня назад</p>
-          </div>
+      <div class="header-news row">
+        <div class="col-md-8">  
+          <p><img src="images/mars.png" class="img-responsive"></p>
         </div>
-        <hr class="hr-divider hidden-xs">
+        <div class="col-md-4 header-text">
+          <p class="tag visible-xs">Руководство</p>
+          <h1 class="hidden-xs"><a href="#">Выгружаем фото Марса с сайта NASA с помощью aiohttp</a></h1>
+          <h4 class="visible-xs">Выгружаем фото Марса с сайта NASA с помощью aiohttp</h4>
+          <p>I am a huge fan of the book The Martian by Andy Weir. Reading it I wondered how did Mark Watney feel when he walked around the Red Planet.</p>
+          <button class="btn btn-primary btn-square hidden-xs">Читать полностью</button>
+          <p class="date visible-xs">3 дня назад</p>
+        </div>
+        <div class="col-md-12">
+          <hr class="hr-divider hidden-xs">
+        </div>
       </div>
       <div class="landing">
         <div class="row">
@@ -91,7 +90,7 @@
             <button class="btn btn-square">Регистрация</button>
           </div>
           <div class="col-md-4 col-sm-6 mpc-label card">
-            <p class="img-container"><img src="images/mpc.png" class="img-responsive"></p>
+            <p class="img-container"><a href="#" target="_blank"><img src="images/mpc.png" class="img-responsive"></a></p>
           </div>
           <div class="col-md-4 col-sm-6 article card">
             <p class="img-container"><img src="images/youtube.png" class="img-responsive"></p>
@@ -110,13 +109,13 @@
           <div class="col-md-12 col-sm-12 col-xs-12 subscribe">
             <form class="form row">
               <h3>Лучшая рассылка</h3>
-              <div class="form-group col-md-6 col-sm-9 col-xs-12">
+              <div class="form-group col-md-8 col-sm-9 col-xs-12">
                 <input class="form-control input-square" type="email" name="email">
               </div>
               <div class="col-md-2 col-sm-3 form-group">
                 <button class="btn btn-square">Подписаться</button>
               </div>
-              <div class="col-md-6 col-sm-12">
+              <div class="col-md-9 col-sm-12">
                 <p>Мы напишем, как будет что-то интересное, а спамить не будем, даже не просите.</p>
               </div>
             </form>
@@ -151,21 +150,21 @@
         </div>
       </div>
       <footer class="row">
-        <div class="col-md12">
+        <div class="col-md-12">
           <hr class="hr-divider">
           <div class="col-md-4 col-sm-4 text-left email hidden-xs">
-            <p><span class="fa fa-envelope fa-3x" aria-hidden="true"></span> team@python.ru</p>
+            <p><span class="fa fa-envelope" aria-hidden="true"></span> team@python.ru</p>
           </div>
           <div class="col-md-4 col-sm-4 text-center hidden-xs">
-            <span class="fa fa-facebook fa-3x" aria-hidden="true"></span>
-            <span class="fa fa-twitter fa-3x" aria-hidden="true"></span>
-            <span class="fa fa-slack fa-3x" aria-hidden="true"></span>
+            <span class="fa fa-facebook" aria-hidden="true"></span>
+            <span class="fa fa-twitter" aria-hidden="true"></span>
+            <span class="fa fa-slack" aria-hidden="true"></span>
           </div>
-          <div class="col-md-4 col-sm-4 text-right hidden-xs">
+          <div class="col-md-4 col-sm-4 text-right hidden-xs text-nowrap">
             <p>Сделали студенты <a href="https://devman.org">Девмана</a></p>
           </div>
           <div class="hidden-sm hidden-lg text-center">
-            <span class="fa fa-envelope fa-2x" aria-hidden="true"></span>
+            <p><span class="fa fa-envelope fa-2x" aria-hidden="true"></span>team@python.ru</p>
             <span class="fa fa-facebook fa-2x" aria-hidden="true"></span>
             <span class="fa fa-twitter fa-2x" aria-hidden="true"></span>
             <span class="fa fa-slack fa-2x" aria-hidden="true"></span>
