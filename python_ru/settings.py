@@ -19,6 +19,7 @@ INSTALLED_APPS = [
     'articles',
     'banners',
     'cards_api',
+    'subscribed_people',
 ]
 
 MIDDLEWARE = [
