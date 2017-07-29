@@ -1,0 +1,59 @@
+{% extends 'main_page/base.html' %}
+{% load static %}
+{% block header %}
+{% with cards|first as head %}
+<div class="header-news row">
+  <div class="col-md-8">  
+    <p><img src="/media/{{ head.image }}" class="img-responsive"></p>
+  </div>
+  <div class="col-md-4 header-text">
+    <p class="tag visible-xs">{{ head.category_name }}</p>
+    <h1 class="hidden-xs"><a href="{{ head.url }}">{{ head.title }}</a></h1>
+    <h4 class="visible-xs">{{ head.title }}</h4>
+    <p>{{ head.preview }}</p>
+    {% if head.has_button %}
+	    <a href="{{ head.button_url }}" class="btn btn-primary btn-square hidden-xs">{{ head.button_text }}</a>
+	  {% endif %}
+    <p class="date visible-xs">3 дня назад</p>
+  </div>
+  <div class="col-md-12">
+    <hr class="hr-divider hidden-xs">
+  </div>
+</div>
+{% endwith %}
+{% endblock %}
+{% block landing %}
+<div class="landing">
+	<div class="row">
+  {% for card in cards|slice:"1:" %}
+    <div class="col-md-4 col-sm-6 article card">
+      <p class="img-container"><img src="/media/{{ card.image }}" class="img-responsive"></p>
+      <p class="tag"><a href="#">{{ card.category.title }}</a></p>
+      <h4><a href="{{ card.url }}">{{ card.title }}</a></h4>
+      <p class="text">{{ card.preview }}</p>
+      {% if card.has_button %}
+        <a href="{{ card.button_url }}" class="btn btn-square">{{ card.button_text }}</a>
+      {% else %}
+        <p class="date">3 дня назад</p>
+      {% endif %}
+    </div>
+    {% if forloop.counter == 6 %}
+      <div class="col-md-12 col-sm-12 col-xs-12 subscribe">
+        <form class="form row">
+          <h3>Лучшая рассылка</h3>
+          <div class="form-group col-md-8 col-sm-9 col-xs-12">
+            <input class="form-control input-square" type="email" name="email">
+          </div>
+          <div class="col-md-2 col-sm-3 form-group">
+            <a href="#" class="btn btn-square">Подписаться</a>
+          </div>
+          <div class="col-md-9 col-sm-12">
+            <p>Мы напишем, как будет что-то интересное, а спамить не будем, даже не просите.</p>
+          </div>
+        </form>
+      </div>
+    {% endif %}
+  {% endfor %}
+  </div>
+</div>
+{% endblock %}
