@@ -158,7 +158,7 @@ p.tag {
 	font-size: 12px;
 	font-weight: bold;
 	color: #000;
-	padding-top: 10px;
+	margin-top: -15px;
 	text-transform: lowercase;
 }
 .article h4 {
@@ -182,12 +182,12 @@ p.tag {
 	color: #e93f33;
 	line-height: 2.9em;
 }
-.subscribe a.btn, .card a.btn {
+.subscribe button.btn, .card a.btn {
 	background-color: #f9cf53;
 	text-transform: uppercase;
 	color: #000;
 }
-.subscribe a.btn:hover, .card a.btn:hover {
+.subscribe button.btn:hover, .card a.btn:hover{
 	background-color: #f8c133;
 	color: #fff;
 }
@@ -203,8 +203,13 @@ p.tag {
 	opacity: 0.5;
 	line-height: 20px;
 }
+.landing .row {
+	display: table;
+	width: 100%;
+}
 .landing .card {
-	min-height: 415px;
+	display: table-cell;
+	padding-bottom: 30px;
 }
 .img-container {
 	height: 13em;
