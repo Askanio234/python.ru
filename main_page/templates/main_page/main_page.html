@@ -27,7 +27,7 @@
 	<div class="row">
   {% for card in cards|slice:"1:" %}
     <div class="col-md-4 col-sm-6 article card">
-      <p class="img-container"><img src="/media/{{ card.image }}" class="img-responsive"></p>
+      <p class="img-container"><img src="/media/{{ card.image }}" class="img-responsive" height="180" width="300"></p>
       <p class="tag"><a href="#">{{ card.category.title }}</a></p>
       <h4><a href="{{ card.url }}">{{ card.title }}</a></h4>
       <p class="text">{{ card.preview }}</p>
@@ -38,14 +38,15 @@
       {% endif %}
     </div>
     {% if forloop.counter == 6 %}
+    {% load widget_tweaks %}
       <div class="col-md-12 col-sm-12 col-xs-12 subscribe">
-        <form class="form row">
+        <form class="form row" method="post" action="{% url 'subscribe' %}">{% csrf_token %}
           <h3>Лучшая рассылка</h3>
           <div class="form-group col-md-8 col-sm-9 col-xs-12">
-            <input class="form-control input-square" type="email" name="email">
+          {{ form.email|add_class:"form-control input-square" }}
           </div>
           <div class="col-md-2 col-sm-3 form-group">
-            <a href="#" class="btn btn-square">Подписаться</a>
+            <button type="submit" class="btn btn-square">Подписаться</button>
           </div>
           <div class="col-md-9 col-sm-12">
             <p>Мы напишем, как будет что-то интересное, а спамить не будем, даже не просите.</p>
