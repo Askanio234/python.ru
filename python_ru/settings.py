@@ -21,6 +21,7 @@ INSTALLED_APPS = [
     'banners',
     'cards_api',
     'subscribed_people',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
