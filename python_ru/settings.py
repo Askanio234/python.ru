@@ -21,6 +21,7 @@ INSTALLED_APPS = [
     'banners',
     'cards_api',
     'subscribed_people',
+    'menu',
     'widget_tweaks',
 ]
 
