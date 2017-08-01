@@ -7,7 +7,7 @@
     <p><img src="/media/{{ head.image }}" class="img-responsive"></p>
   </div>
   <div class="col-md-4 header-text">
-    <p class="tag visible-xs">{{ head.category_name }}</p>
+    <p class="tag visible-xs">{{ head.category.title }}</p>
     <h1 class="hidden-xs"><a href="{{ head.url }}">{{ head.title }}</a></h1>
     <h4 class="visible-xs">{{ head.title }}</h4>
     <p>{{ head.preview }}</p>
@@ -37,6 +37,12 @@
         <p class="date">3 дня назад</p>
       {% endif %}
     </div>
+    {% if forloop.counter|divisibleby:"3" %}
+      <div class="col-md-12 hidden-sm hidden-xs"></div>
+    {% endif %}
+    {% if forloop.counter|divisibleby:"2" %}
+      <div class="col-sm-12 hidden-md hidden-lg hidden-xs"></div>
+    {% endif %}
     {% if forloop.counter == 6 %}
     {% load widget_tweaks %}
       <div class="col-md-12 col-sm-12 col-xs-12 subscribe">

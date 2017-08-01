@@ -54,6 +54,9 @@
 	.header-text {
 		padding-left: 15px !important;
 	}
+	.header-text p.tag {
+		margin-top: 10px;
+	}
 	.header-text h4 {
 		font-weight: bold;
 	}
@@ -203,13 +206,8 @@ p.tag {
 	opacity: 0.5;
 	line-height: 20px;
 }
-.landing .row {
-	display: table;
-	width: 100%;
-}
-.landing .card {
-	display: table-cell;
-	padding-bottom: 30px;
+.card {
+	margin-bottom: 30px;
 }
 .img-container {
 	height: 13em;
@@ -224,7 +222,7 @@ p.tag {
 	padding-top: 1px;
 	padding-bottom: 1px;
 	margin-bottom: 30px;
-	margin-top: -25px;
+	margin-top: -20px;
 	margin-left: -5px;
 }
 .subscribe h3 {
