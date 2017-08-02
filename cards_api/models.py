@@ -10,6 +10,10 @@ class CardCategory(models.Model):
 
 
 class Card(TimeStampedModel, StatusModel):
+
+    class Meta:
+        ordering = ["-article"]
+
     STATUS = Choices(
         ('draft', 'Draft'),
         ('published', 'Published'),
