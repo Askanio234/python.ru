@@ -62,11 +62,11 @@
     {% else %}
       <li class="disabled"><span>&laquo;</span></li>
     {% endif %}
-    {% for i in paginator.page_range %}
-      {% if page_obj.number == i %}
-        <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+    {% for page in paginator.page_range %}
+      {% if page_obj.number == page %}
+        <li class="active"><span>{{ page }} <span class="sr-only">(current)</span></span></li>
       {% else %}
-        <li><a href="?page={{ i }}">{{ i }}</a></li>
+        <li><a href="?page={{ page }}">{{ page }}</a></li>
       {% endif %}
     {% endfor %}
     {% if cards.has_next %}
