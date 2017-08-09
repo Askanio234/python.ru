@@ -7,11 +7,12 @@ $('button.more-button').on('click', function(){
 			var landing = '<div class="landing"><div class="row">';
 			$.each(response.data, function(index, element){
 				index += 1;
-				landing += '<div class="col-md-4 col-sm-6 article card">\
-										<p class="img-container"><img src="' + element.image + '" class="img-responsive" height="180" width="300"></p>\
-										<p class="tag"><a href="#">' + element.title + '</a></p>\
-							      <h4><a href="' + element.url + '">' + element.title + '</a></h4>\
-							      <p class="text">' + element.preview + '</p>'
+				landing += '\
+          <div class="col-md-4 col-sm-6 article card">\
+				  <p class="img-container"><img src="' + element.image + '" class="img-responsive" height="180" width="300"></p>\
+					<p class="tag"><a href="#">' + element.title + '</a></p>\
+		      <h4><a href="' + element.url + '">' + element.title + '</a></h4>\
+		      <p class="text">' + element.preview + '</p>'
 				if (element.has_button){
 					landing += '<a href="' + element.button_url + '" class="btn btn-square">'+ element.button_text + '</a></div>'
 				} else {
