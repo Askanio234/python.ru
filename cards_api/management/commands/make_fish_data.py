@@ -5,8 +5,8 @@ from cards_api import factories
 class Command(BaseCommand):
     help = 'Creates test data for development'
 
-    categories_amount = 3
-    cards_amount = 10
+    categories_amount = 6
+    cards_amount = 50
 
     def handle(self, *args, **options):
         for _ in range(self.categories_amount):
